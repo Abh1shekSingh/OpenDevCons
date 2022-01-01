@@ -26,7 +26,7 @@ mongoose.connect(
 
 //Middleware
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:3000", credentials:true }))
+app.use(cors({ origin: "https://modest-jackson-89e223.netlify.app", credentials:true }))
 app.set("trust proxy", 1);
 
 app.use(
@@ -80,7 +80,7 @@ app.get("/auth/google",
 app.get("/auth/google/opendevcons", 
   passport.authenticate('google', { failureRedirect: '/login' }),
   function(req, res) {
-    res.redirect('http://localhost:3000');
+    res.redirect('https://modest-jackson-89e223.netlify.app');
   });
 
   
